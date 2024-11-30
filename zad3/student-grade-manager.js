@@ -10,13 +10,13 @@ class Student {
     }
 
     getAverage() {
-        let avg = this.oceny.reduce((sum, num) => sum + num) / this.oceny.length()
+        let avg = this.oceny.reduce((sum, num) => sum + num) / this.oceny.length
         return avg
     }
 
     studentInfo() {
-        const {imie, wiek, ...oceny} = this
-        console.log(`${imie}, ${wiek} lat. Oceny ucznia: ${oceny}`)
+        const {imie, wiek, oceny} = this
+        console.log(`$Uczeń {imie}, ${wiek} lat. Oceny ucznia: ${oceny}`)
     }
 }
 
