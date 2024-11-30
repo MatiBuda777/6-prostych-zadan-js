@@ -1,22 +1,24 @@
-const text = "abcDEfGhi-jk_l_+mNOp.."
+let text = "abcDEfGhi-jk_l_+mNOp.."
 const processText = (text, { uppercase = false, reverse = false, removeSpecialChar = false } = {}) => {
-    
+    let operacje = []
     if (uppercase == true){
-        let textUppercase = text.toUpperCase()
-        console.log(textUppercase)
+        text = text.toUpperCase()
+        operacje.push(" konwersja na duże litery")
     }
+
     if (reverse == true){
         const [ ...rest ] = text;
         rest.reverse()
-        let textReverse = rest.join("")
-        console.log(textReverse)
+        text = rest.join("")
+        operacje.push(" odwrócenie kolejności liter")
     }
+
     if (removeSpecialChar == true){
-        let textRemoveSpecialChar = text.replace(/[^a-zA-Z ]/g, '') // regex (regular expression)
-        console.log(textRemoveSpecialChar)
+        text = text.replace(/[^a-zA-Z ]/g, '') // regex (regular expression) 
+        operacje.push(" usunięcie znaków specjalnych")
     }
+
+    console.log(`Tekst po operacjach: ${operacje} - '${text}'`)
 }
 
 processText(text, {uppercase: true, reverse: true, removeSpecialChar: true})
-
-
