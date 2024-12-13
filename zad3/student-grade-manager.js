@@ -16,7 +16,7 @@ class Student {
 
     studentInfo() {
         const {imie, wiek, oceny} = this
-        console.log(`$Uczeń {imie}, ${wiek} lat. Oceny ucznia: ${oceny}`)
+        console.log(`Uczeń ${imie}, ${wiek} lat. Oceny ucznia: ${oceny}`)
     }
 }
 
